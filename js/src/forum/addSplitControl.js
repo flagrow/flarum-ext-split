@@ -1,8 +1,8 @@
 import { extend } from 'flarum/common/extend';
-import app from 'flarum/common/app';
+import app from 'flarum/forum/app';
 import PostControls from 'flarum/common/utils/PostControls';
 import Button from 'flarum/common/components/Button';
-import CommentPost from 'flarum/common/components/CommentPost';
+import CommentPost from 'flarum/forum/components/CommentPost';
 import SplitPostModal from './components/SplitPostModal';
 
 export default function (controller) {
