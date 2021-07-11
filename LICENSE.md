@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Coptright (c) 2020 FriendOfFlarum
+Copyright (c) 2020 FriendOfFlarum
 Copyright (c) Flagrow, Connor Davis (davis@produes.co), Matteo Pompili (matpompili@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
