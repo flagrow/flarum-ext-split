@@ -70,6 +70,7 @@ export default class SplitPostModal extends Modal {
             discussion.isUnread = Stream(data.data.attributes.isUnread);
             this.hide();
             m.route.set(app.route.discussion(discussion));
+            this.attrs.split.reset();
         }, this.loaded.bind(this));
     }
 }
