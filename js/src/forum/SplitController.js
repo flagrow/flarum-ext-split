@@ -8,21 +8,23 @@ export default class SplitController {
 
         this.startPostId = postId;
 
-        $('.PostStream-item').each(function () {
-            if ($(this).attr('data-number') >= postNumber) {
-                $('.flagrow-split-endSplitButton', $(this)).show();
-            }
-        });
+        app.__fof_split.splitting = true;
+        app.__fof_split.splittingFrom = postNumber;
 
-        $('.flagrow-split-startSplitButton').hide();
+        m.redraw();
     }
 
     end(postNumber) {
         this.endPostNumber = postNumber;
+
+        app.__fof_split.splitting = false;
     }
 
     reset() {
         this.startPostId = null;
         this.endPostNumber = null;
+
+        app.__fof_split.splitting = false;
+        app.__fof_split.splittingFrom = undefined;
     }
 }
