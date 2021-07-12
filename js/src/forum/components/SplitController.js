@@ -11,7 +11,7 @@ export default class SplitController {
         app.__fof_split.splitting = true;
         app.__fof_split.splittingFrom = postNumber;
 
-        m.redraw()
+        m.redraw();
     }
 
     end(postNumber) {
