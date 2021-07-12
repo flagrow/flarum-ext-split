@@ -54,7 +54,7 @@ export default class SplitPostModal extends Modal {
         const data = new FormData();
 
         data.append('title', this.newDiscussionTitle());
-        data.append('start_post_id', this.attrs.split.startPostId);
+        data.append('start_post_id', app.__fof_split.splitController.startPostId);
         data.append('end_post_number', this.attrs.post.number());
 
         app.request({
@@ -64,13 +64,16 @@ export default class SplitPostModal extends Modal {
             body: data,
         }).then((data) => {
             let discussion = {};
+
             discussion.id = Stream(data.data.id);
             discussion.slug = Stream(data.data.attributes.slug);
             discussion.startUser = Stream(data.data.attributes.startUser);
             discussion.isUnread = Stream(data.data.attributes.isUnread);
+
+            app.__fof_split.splitController.reset();
+
             this.hide();
             m.route.set(app.route.discussion(discussion));
-            this.attrs.split.reset();
         }, this.loaded.bind(this));
     }
 }

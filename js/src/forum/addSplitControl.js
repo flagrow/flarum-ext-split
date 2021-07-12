@@ -41,7 +41,6 @@ export default function () {
                     className="flagrow-split-endSplitButton Button Button--link"
                     onclick={() => {
                         app.modal.show(SplitPostModal, {
-                            split: app.__fof_split.splitController,
                             post: post,
                         });
                     }}
